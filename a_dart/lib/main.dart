@@ -35,7 +35,11 @@ class _MyAppState extends State<MyApp> {
     });
   }
 
-  var questions = [
+  // decorator to override stateless method
+  @override
+  Widget build(BuildContext context) {
+    
+    var questions = const [
     {
       'quesText': 'What\'s my fav Color?',
       'answers': ['Black', 'Green', 'White']
@@ -49,9 +53,7 @@ class _MyAppState extends State<MyApp> {
       'answers': ['Owl', 'Cat', 'Dog']
     },
   ];
-  // decorator to override stateless method
-  @override
-  Widget build(BuildContext context) {
+    
     // material app provided by material.dart
     // Scaffold gives base structure of app
     return MaterialApp(
@@ -66,7 +68,8 @@ class _MyAppState extends State<MyApp> {
             // text is a stateless widget
             // Question is a ustom widget
             Question(questions[_quesIndex]['quesText']),
-            (questions[_quesIndex]['answers'] as List<String>).map((answer){
+            // ... TAKES all list items and adds them to surrounding list as individual values
+            ...(questions[_quesIndex]['answers'] as List<String>).map((answer){
               return Answer(annQues,answer);
             }).toList(),
             // RaisedButton(
