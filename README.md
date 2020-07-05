@@ -3,6 +3,7 @@
 ## Docs
 
 [DOCS](https://flutter.dev/docs)
+[PUB.DEV](https://pub.dev)
 
 ### Install
 
@@ -37,6 +38,12 @@
 
 * ./gradlew --stop | To stop all processes
 * ./gradlew --status | To view running
+
+### External packages
+
+* Put all packages in pubspec.yaml
+1.Date package for formatting Dates:
+* intl: ^0.15.8
 
 ### Android vs IOS
 
