@@ -6,9 +6,16 @@ import 'package:flutter/material.dart';
 // OR
 void main() => runApp(MyApp());
 
+// Stateless has 1 class only
+// Stateful has 2 classess
 // every fn for a widget must go in same class 
-class MyApp extends StatelessWidget {
+// class MyApp extends StatelessWidget {
 
+class MyApp extends StatefulWidget{
+
+}
+
+class MyAppState extends State{
   var quesIndex =0;
 
   void annQues(){
