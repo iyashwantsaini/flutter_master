@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+// question file i created
+import './question.dart';
 
 // void main(){
 //   runApp(MyApp());
@@ -13,13 +15,26 @@ void main() => runApp(MyApp());
 
 class MyApp extends StatefulWidget{
 
+  @override
+  State<StatefulWidget> createState() {
+    // throw UnimplementedError();
+    return _MyAppState();
+  }
+
 }
 
-class MyAppState extends State{
-  var quesIndex =0;
+// a leading "_" means private class or function or variable
+// This means that this can be accessed only from inside the main.dart file
+// this state belongs to myapp class
+class _MyAppState extends State<MyApp>{
+
+  var _quesIndex =0;
 
   void annQues(){
-    quesIndex+=1;
+    // setstate used to change state on button press
+    setState((){
+      _quesIndex+=1;
+    });
   }
 
   var questions = ['What\'s', 'Your', 'Fav', 'Color'];
@@ -38,9 +53,10 @@ class MyAppState extends State{
         body: Column(
           children: [
             // text is a stateless widget
-            Text('The Question!'),
+            // Question is a ustom widget
+            Question(questions[_quesIndex]),
             RaisedButton(
-              child: Text(questions[quesIndex]),
+              child: Text(questions[_quesIndex]),
               // dont execute here as only execute when user presses
               onPressed: annQues,
             ),
