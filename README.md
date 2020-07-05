@@ -47,6 +47,6 @@
 
 * waiting to break flutter lock | killall -9 dart
 * inside project | flutter clean
-a. delete all contents under /home/nima/.gradle
-b. cd to the android folder for your flutter project and run ./gradlew sync command, it will download the gradle-xxx.zip automatically. It this gradle process succeeds, re-run the flutter run command.
-
+* Gradle errors : ?
+    *a. delete all contents under /home/nima/.gradle
+    *b. cd to the android folder for your flutter project and run ./gradlew sync command, it will download the gradle-xxx.zip automatically. It this gradle process succeeds, re-run the flutter run command.
